@@ -1,9 +1,9 @@
-﻿//using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Data.Entity;
+//using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,7 +50,7 @@ namespace Fives
                 // adding to database
                 using (var db = new DominionDbContext())
                 {
-                //    db.Database.Migrate();
+                    db.Database.Migrate();
                     try
                     {
                         db.Fives.Add(agenda);
